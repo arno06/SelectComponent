@@ -1,0 +1,8 @@
+.scomponent-container{height:300px;display:flex;flex-direction: row;font-family: Arial,sans-serif;font-size:12px;}
+.scomponent-options,
+.scomponent-actions{flex-grow: 0;flex-shrink: 0;height:300px;}
+.scomponent-options{width:200px;border:solid 1px #444;overflow:auto;}
+.scomponent-options .option{padding:10px;border-bottom:solid 1px #aaa;}
+.scomponent-options .option.selected{background: #396387;color:#fff;}
+.scomponent-actions{width:50px;}
+.scomponent-actions button{display:block;margin:10px auto;}
