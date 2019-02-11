@@ -88,7 +88,11 @@ Class.define(SelectComponent, [EventDispatcher], {
             opt = document.getElementById(id);
             parent = opt.parentNode;
             parent.removeChild(opt);
-            parent.insertBefore(opt, parent.firstChild);
+            if(parent.firstChild){
+                parent.insertBefore(opt, parent.firstChild);
+            }else{
+                parent.appendChild(opt);
+            }
         }
     },
     up:function(e){
