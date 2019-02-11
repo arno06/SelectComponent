@@ -7,16 +7,21 @@
         <link href="../src/SelectComponent.css" rel="stylesheet"/>
     </head>
     <body>
-        <form action="index.html" method="post">
+        <form action="check_order.php" method="post">
+            <p>
             <label for="mySelect">My Select</label>
-            <select name="mySelect" id="mySelect" rel="SelectComponent">
+            <select name="mySelect[]" id="mySelect" rel="SelectComponent" multiple>
                 <option value="1">Value 1</option>
                 <option value="2">Value 2</option>
-                <option value="3" id="test">Value 3</option>
+                <option value="3">Value 3</option>
                 <option value="4" selected="selected">Value 4</option>
                 <option value="5">Value 5</option>
                 <option value="6">Value 6</option>
             </select>
+            </p>
+            <p>
+                <input type="submit" value="Envoyer"/>
+            </p>
         </form>
     </body>
 </html>
