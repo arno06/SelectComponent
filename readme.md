@@ -8,3 +8,7 @@ Usage
 <!-- options -->
 </select>
 ```
+
+Dependencies
+---
+ * [Class](https://dependencies.arnaud-nicolas.fr/?need=class)

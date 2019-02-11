@@ -17,7 +17,7 @@ function SelectComponent(pElement){
     this.build();
 }
 
-Class.define(SelectComponent, [EventDispatcher], {
+Class.define(SelectComponent, [], {
     build:function(){
         var ref = this;
         var availableOptions = "<div class='scomponent-options available'>" + (this.unselectedOptions.map(function(pOption){
