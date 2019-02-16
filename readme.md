@@ -11,4 +11,4 @@ Usage
 
 Dependencies
 ---
- * [Class](https://dependencies.arnaud-nicolas.fr/?need=class)
+ * [Class](https://dependencies.arnaud-nicolas.fr/?need=Class)
