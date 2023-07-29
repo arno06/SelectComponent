@@ -1,8 +1,36 @@
 .scomponent-container{height:300px;display:flex;flex-direction: row;font-family: Arial,sans-serif;font-size:12px;}
+.scomponent-container *{user-select: none;}
 .scomponent-options,
 .scomponent-actions{flex-grow: 0;flex-shrink: 0;height:300px;}
-.scomponent-options{width:200px;border:solid 1px #444;overflow:auto;}
-.scomponent-options .option{padding:10px;border-bottom:solid 1px #aaa;cursor:pointer;}
-.scomponent-options .option.selected{background: #396387;color:#fff;}
-.scomponent-actions{width:50px;}
-.scomponent-actions button{display:block;margin:10px auto;}
+.scomponent-options::before{display:block;content:attr(data-label);text-align: center;font-size:0.9em;padding:0.4em;background: #fafafa;position: sticky;top:0;}
+.scomponent-options{width:200px;border:solid 1px #9b9b9b;overflow:auto;border-radius:5px;}
+.scomponent-options .option{padding:10px;cursor:pointer;color:#555;margin:0 3px;}
+.scomponent-options .option:hover{background: #ebf5fd;color:#000;}
+.scomponent-options .option.selected{background: #dcedfe;color:#000;}
+.scomponent-options.selected .option:hover{background: #ebfdf2;color:#000;}
+.scomponent-options.selected .option.selected{background: #dcfee8;}
+.scomponent-actions{width:50px;display:flex;flex-direction: column;justify-content: center;}
+.scomponent-actions button{display:block;margin:10px auto;width:28px;height:28px;border:none;background:none;cursor: pointer;border-radius:4px;position:relative;}
+.scomponent-actions button::before, .scomponent-actions button::after{transition:all .3s;display:block;content:'';width:2px;height:10px;background:#fff;position:absolute;top:50%;left:50%;}
+.scomponent-actions button.select{background: #6ea7e0;color:#fff;}
+.scomponent-actions button.select::before{margin-top:-3px;transform:translate(-50%, -50%) rotate(-45deg);}
+.scomponent-actions button.select::after{margin-top:3px;transform:translate(-50%, -50%) rotate(45deg);}
+.scomponent-actions button.unselect::before{margin-top:-3px;transform:translate(-50%, -50%) rotate(45deg);}
+.scomponent-actions button.unselect::after{margin-top:3px;transform:translate(-50%, -50%) rotate(-45deg);}
+.scomponent-actions button.up::before{margin-left:-3px;transform:translate(-50%, -50%) rotate(45deg);}
+.scomponent-actions button.up::after{margin-left:3px;transform:translate(-50%, -50%) rotate(-45deg);}
+.scomponent-actions button.down::before{margin-left:3px;transform:translate(-50%, -50%) rotate(45deg);}
+.scomponent-actions button.down::after{margin-left:-3px;transform:translate(-50%, -50%) rotate(-45deg);}
+.scomponent-actions button.select:hover::before,
+.scomponent-actions button.select:hover::after{margin-left:2px;}
+.scomponent-actions button.unselect:hover::before,
+.scomponent-actions button.unselect:hover::after{margin-left:-2px;}
+.scomponent-actions button.up:hover::before,
+.scomponent-actions button.up:hover::after{margin-top:-2px;}
+.scomponent-actions button.down:hover::before,
+.scomponent-actions button.down:hover::after{margin-top:2px;}
+.scomponent-actions button.unselect,.scomponent-actions.ordering button{background: #4cd975;color:#fff;}
+.scomponent-actions.selection{}
+.scomponent-actions button{visibility: hidden;}
+.scomponent-actions.ordering.selected button,.scomponent-actions.selection.available button.select{visibility: visible;}
+.scomponent-actions.selection.selected button.unselect{visibility: visible;}

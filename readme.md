@@ -4,11 +4,15 @@ SelectComponent
 Usage
 ---
 ```html
-<select name="someSelect" id="someSelectId" rel="SelectComponent">
-<!-- options -->
-</select>
+<htmL>
+    <head>
+        <link src="path/to/selectComponent.css" rel="stylesheet">
+    </head>
+    <body>
+        <select name="someSelect" id="someSelectId" rel="SelectComponent">
+            <!-- options -->
+        </select>
+        <script src="path/to/SelectComponent.js"></script>
+    </body>
+</htmL>
 ```
-
-Dependencies
----
- * [Class](https://dependencies.arnaud-nicolas.fr/?need=Class)
