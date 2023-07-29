@@ -78,7 +78,7 @@ class SelectComponent {
         let option, ref_option, parent, i;
         if (pDirection !== 0) {
             i = pDirection === -1 ? 1 : options.length - 2;
-            var inc = -pDirection;
+            const inc = -pDirection;
             for (; pDirection === -1 ? i < options.length : i >= 0; i += inc) {
                 options = this.parent.querySelectorAll(".scomponent-options.selected .option");
                 option = options.item(i);
