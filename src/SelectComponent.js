@@ -52,7 +52,6 @@ class SelectComponent {
         this.parent.querySelectorAll(".scomponent-options." + pFrom + " .option.selected").forEach((pItem)=>{
             pItem.parentNode.removeChild(pItem);
             this.parent.querySelector(".scomponent-options." + pTo).insertBefore(pItem, this.parent.querySelector(".scomponent-options." + pTo).lastChild);
-            pItem.classList.remove("selected");
         });
         this.parent.querySelectorAll(".scomponent-options.selected .option").forEach((pItem)=>{
             document.querySelector('#' + pItem.dataset.id).selected = true;
